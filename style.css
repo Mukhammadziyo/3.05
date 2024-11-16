@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #e0f1e8;
+  font-family: "Karla", sans-serif;
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 40px;
+  width: 736px;
+  height: 773px;
+}
+
+input {
+  font-family: inherit;
+  font-size: 24px;
+  outline: none;
+  border: 1px solid #86a2a5;
+  border-radius: 8px;
+  padding: 5px;
+  height: 50px;
+
+  &:hover {
+    cursor: pointer;
+    border-color: #0c7d69;
+  }
+
+  &:focus {
+    cursor: text;
+    border-color: #0c7d69;
+  }
+}
+
+label {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #2a4144;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -1px;
+  color: #2a4144;
+  margin-bottom: 32px;
+}
+
+.fl-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.fl-name input {
+  width: 320px;
+}
+
+.persons-name,
+.persons-surname {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.gmail {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-bottom: 24px;
+
+  input {
+    width: 656px;
+  }
+}
+
+.quere-type {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.quere-type-inside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 12px 24px;
+  width: 320px;
+  height: 50px;
+  border: 1px solid #86a2a5;
+  border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #e0f1e8;
+    border-color: #0c7d69;
+  }
+
+  &:focus {
+    border-color: #0c7d69;
+  }
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+.message-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  textarea {
+    padding: 12px 24px;
+    width: 655px;
+    height: 105px;
+    outline: none;
+    font-size: 20px;
+    border: 1px solid #86a2a5;
+    border-radius: 8px;
+    resize: none;
+
+    &:hover {
+      cursor: pointer;
+      border-color: #0c7d69;
+    }
+
+    &:focus {
+      cursor: text;
+      border-color: #0c7d69;
+    }
+  }
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin: 40px 0;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+.button {
+  width: 655px;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 27px;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #0c7d69;
+
+  &:hover {
+    background-color: #063f35;
+  }
+}
+
+@media (max-width: 800px) {
+  form {
+    max-width: 650px;
+    height: 800px;
+    margin: 20px;
+  }
+
+  .fl-name input {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .fl-name input {
+    width: 100%;
+  }
+
+  .message-container > textarea {
+    width: 100%;
+  }
+
+  .gmail input {
+    width: 100%;
+  }
+
+  .quere-type-inside {
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 670px) {
+  form {
+    max-width: 450px;
+    height: auto;
+  }
+
+  .fl-name {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 24px;
+  }
+
+  .fl-name input {
+    width: 375px;
+  }
+
+  .gmail input {
+    width: 375px;
+  }
+
+  .quere-type-inside {
+    flex-direction: column;
+    row-gap: 24px;
+    align-items: start;
+  }
+
+  .radio-container {
+    width: 375px;
+  }
+}
+@media (max-width: 500px) {
+  form {
+    max-width: 350px;
+  }
+
+  .fl-name input {
+    width: 100%;
+  }
+
+  .gmail input {
+    width: 100%;
+  }
+
+  .radio-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  form {
+    max-width: 300px;
+  }
+}
